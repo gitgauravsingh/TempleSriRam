@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TempleSriRam/static/css/main.8b4ae94d.css",
+    "main.js": "/TempleSriRam/static/js/main.eb67bdf6.js",
+    "index.html": "/TempleSriRam/index.html",
+    "main.8b4ae94d.css.map": "/TempleSriRam/static/css/main.8b4ae94d.css.map",
+    "main.eb67bdf6.js.map": "/TempleSriRam/static/js/main.eb67bdf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b4ae94d.css",
+    "static/js/main.eb67bdf6.js"
+  ]
+}
