@@ -1,0 +1,128 @@
+.faqdata {
+  background-image: url("https://www.digitalrammandir.com/wp-content/uploads/2023/12/section-4.jpg");
+  background-size: initial;
+  background-repeat: no-repeat;
+  padding-bottom: 60px;
+  .wrapper {
+    width: 1050px;
+    margin: 0 auto;
+    .textdata {
+      display: block;
+      text-align: center;
+      padding-top: 30px;
+      h2 {
+        font-size: 50px;
+        color: #ffd08b !important;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-style: italic;
+      }
+    }
+    .textfaq {
+      margin-top: 20px;
+      .maindata {
+        border: solid 1px #ddd;
+        padding: 25px 20px;
+        border-radius: 20px;
+        position: relative;
+        height: 30px;
+        overflow-y: hidden;
+        transition: 0.6s;
+        cursor: pointer;
+        margin-top: 40px;
+        &.open {
+          height: 200px;
+        }
+        &.open:nth-child(2) {
+          height: 255px;
+        }
+        &.open:nth-child(3) {
+          height: 295px;
+        }
+        &.open:nth-child(4) {
+          height: 120px;
+        }
+        &.open:nth-child(5) {
+          height: 170px;
+        }
+        &.open::after {
+          content: url("https://digitalrammandir.com/wp-content/uploads/2023/12/add.png");
+        }
+        &::after {
+          content: url("https://digitalrammandir.com/wp-content/uploads/2023/12/minus.png");
+          position: absolute;
+          right: 33px !important;
+          top: 40px;
+          transform: translateY(-50%);
+        }
+        &::before {
+          content: "Q";
+          position: absolute;
+          color: #ffd08b;
+          left: 15px;
+          font-size: 26px;
+          line-height: 40px;
+          font-weight: 400;
+          transform: translateY(-50%);
+          top: 40px;
+        }
+        h5 {
+          font-size: 22px;
+          color: #fff;
+          margin: 0;
+          padding: 0px 25px;
+          margin: 0;
+          font-style: italic;
+        }
+        p {
+          font-size: 19px;
+          line-height: 28px;
+          color: rgba(255, 255, 255, 0.6);
+          margin: 0;
+          font-weight: 500;
+          font-style: italic;
+          padding: 30px 0px;
+          text-shadow: 0.03em 0.07em 0.15em rgba(0, 0, 0, 0.6);
+          a {
+            color: #ffd08b;
+            text-decoration: none;
+          }
+        }
+        span {
+          font-size: 19px;
+          line-height: 28px;
+          color: rgba(255, 255, 255, 0.6);
+          margin: 0;
+          font-weight: 500;
+          font-style: italic;
+          text-shadow: 0.03em 0.07em 0.15em rgba(0, 0, 0, 0.6);
+          a {
+            color: #ffd08b;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .faqdata {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    .wrapper {
+      width: 100%;
+      .textdata {
+        width: 100%;
+        h2 {
+          font-size: 20px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+}

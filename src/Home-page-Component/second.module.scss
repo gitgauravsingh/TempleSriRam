@@ -1,0 +1,199 @@
+.seconddata {
+  background-image: url("https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png");
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  &::after {
+    background-image: url("https://dvf7opio6knc7.cloudfront.net/satyugImages/login-bg-overlay.webp");
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100vh;
+  }
+  .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    .dotbar {
+      width: 100%;
+      span {
+        position: absolute;
+        top: 58px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        z-index: 999;
+        img {
+          width: 100%;
+        }
+      }
+      .imgdata {
+        position: relative;
+        z-index: 1;
+        width: 700px;
+        height: 350px;
+        margin: 0 auto;
+        padding-top: 100px;
+        img {
+          border: solid 2px #ffd08b;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: relative;
+        }
+        &::after {
+          content: "";
+          left: 2px;
+          opacity: 0.8;
+          position: absolute;
+          top: 102px;
+          width: 100%;
+          height: 350px;
+          background: linear-gradient(180deg, #000, #0000 86.41%),
+            linear-gradient(0deg, #110a0a00, #110a0a00),
+            linear-gradient(
+              180deg,
+              #6f6f6f00 18.46%,
+              #fff0 77.53%,
+              #3f3f3f6b 134.04%
+            ),
+            linear-gradient(
+              180deg,
+              #ffba5500 33.25%,
+              #ffba5500 67.37%,
+              #ffba5500
+            );
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        width: 294px;
+        height: 2px;
+        transform: translateX(-50%);
+        background: #000;
+        z-index: 11;
+      }
+      .button {
+        background: url(https://dvf7opio6knc7.cloudfront.net/satyugImages/btn-bg-2.svg)
+          no-repeat;
+        background-size: 100%;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 230px;
+        height: 60px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 55px;
+        z-index: 11;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          font-weight: 700;
+          color: #000;
+          font-style: italic;
+          font-family: "Aclonica", Helvetica, Arial, Lucida, sans-serif;
+        }
+        //   &:hover {
+        //     background: url(https://dvf7opio6knc7.cloudfront.net/satyugImages/btn-bg-hovered.png);
+        //     width: 230px;
+        //   }
+      }
+      .text {
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99;
+        h2 {
+          color: #ffd08b;
+          filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.243));
+          font-size: 15;
+          font-weight: 400;
+          letter-spacing: 0.01em;
+          line-height: 2.7rem;
+          text-align: center;
+          transition: 0.2s ease-in-out;
+          font-style: italic;
+        }
+      }
+    }
+    .dotdatabar {
+      width: 100%;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 95%;
+        height: 90%;
+        top: 25px;
+        left: 27px;
+        right: 15px;
+        border: 15px;
+        border: 2px dotted #ffd08b;
+        z-index: 11;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .seconddata {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    .wrapper {
+      width: 100%;
+      .dotdatabar {
+        width: 100%;
+        &::after {
+          width: 95%;
+          height: 96%;
+          top: 7px;
+          left: 8px;
+        }
+      }
+      .dotbar {
+        span {
+          width: 200px;
+          top: 72px;
+          img {
+            width: 100%;
+          }
+        }
+        .imgdata {
+          width: 100%;
+          height: 273px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          &::after {
+            height: 273px;
+          }
+        }
+        &::after {
+          width: 200px;
+        }
+        .text {
+          display: block;
+          top: 100px;
+          h2 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

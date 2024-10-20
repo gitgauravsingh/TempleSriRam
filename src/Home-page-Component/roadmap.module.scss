@@ -1,0 +1,294 @@
+.roadmapdata {
+  background-image: url("https://www.digitalrammandir.com/wp-content/uploads/2023/12/section-3.jpg");
+  background-size: cover;
+  background-position: center bottom 0px;
+  background-repeat: no-repeat;
+  .wrapper {
+    width: 1050px;
+    margin: 0 auto;
+    .textbar {
+      display: block;
+      text-align: center;
+      padding-top: 100px;
+      h2 {
+        font-size: 50px;
+        color: #ffd08b !important;
+        line-height: 60px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-style: italic;
+      }
+    }
+    .monthdata {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+      .jandata {
+        width: 50%;
+        padding-top: 50px;
+        h4 {
+          text-transform: uppercase;
+          font-size: 20px;
+          color: #ffffff !important;
+          letter-spacing: 0.2px;
+          line-height: 25px;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          font-style: italic;
+        }
+        h3 {
+          font-size: 26px;
+          color: #ffba55 !important;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          font-style: italic;
+        }
+        h5 {
+          font-size: 18px;
+          color: #ffba55 !important;
+          line-height: 24px;
+          text-align: center;
+          padding: 0px;
+          margin: 0 auto;
+          width: 125px;
+          font-style: italic;
+        }
+      }
+    }
+    .dhanushdata {
+      width: 99%;
+      img {
+        width: 100%;
+      }
+    }
+    .secondmonth {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 50px;
+      .Decemberdata {
+        width: 24%;
+        h4 {
+          text-transform: uppercase;
+          font-size: 20px;
+          color: #ffffff !important;
+          letter-spacing: 0.2px;
+          line-height: 25px;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          font-style: italic;
+        }
+        h3 {
+          font-size: 26px;
+          color: #ffba55 !important;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          font-style: italic;
+        }
+        h5 {
+          font-size: 18px;
+          color: #ffba55 !important;
+          line-height: 24px;
+          text-align: center;
+          padding: 0px;
+          margin: 0 auto;
+          font-style: italic;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 0.6) !important;
+          padding: 0px 20px;
+          text-align: center;
+          font-style: italic;
+        }
+      }
+    }
+    .ourblogs {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 50px;
+      .imagedata {
+        display: block;
+        width: 48%;
+        position: relative;
+        .mainimg {
+          width: 100%;
+          position: relative;
+          margin-top: 15px;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .textrel {
+          position: absolute;
+          bottom: 42.9%;
+          background: rgba(0, 0, 0, 0.4);
+          height: 100px;
+          width: 100%;
+          h2 {
+            font-size: 28px !important;
+            line-height: 42px !important;
+            padding: 0px 20px;
+            margin: 0;
+            font-style: italic;
+            a {
+              text-decoration: none;
+              color: #ffffff;
+              font-style: italic;
+            }
+          }
+        }
+      }
+      .blogtext {
+        display: block;
+        width: 48%;
+        .bolgview {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          align-items: center;
+          h2 {
+            font-size: 50px;
+            color: #ffd08b;
+            font-style: italic;
+            padding: 0;
+            margin: 0;
+          }
+          a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffd08b;
+            border: solid 2px #ffd08b;
+            border-radius: 25px;
+            font-style: italic;
+            font-weight: 600;
+          }
+        }
+        .mainblog {
+          display: block;
+          margin-top: 20px;
+          .imagebar {
+            display: flex;
+            width: 85%;
+            gap: 20px;
+            img {
+              width: 140px;
+              height: 80px;
+            }
+            .text {
+              h2 {
+                font-size: 17px;
+                font-weight: 700;
+                line-height: 25px;
+                font-style: italic;
+                color: #ffffff !important;
+                padding: 0;
+                margin: 0;
+              }
+              p {
+                font-size: 14px;
+                font-style: italic;
+                color: #ffd08b !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .roadmapdata {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    .wrapper {
+      width: 100%;
+      .textbar {
+        h2 {
+          font-size: 25px;
+          line-height: 40px;
+          img {
+            width: 40px;
+          }
+        }
+      }
+      .monthdata {
+        width: 100%;
+        display: block;
+        .jandata {
+          width: 100%;
+          h5 {
+            width: 100%;
+          }
+        }
+      }
+      .dhanushdata {
+        margin-top: 20px;
+      }
+      .secondmonth {
+        display: block;
+        width: 100%;
+        .Decemberdata {
+          width: 100%;
+          margin-top: 30px;
+          h5 {
+            padding: 0px 40px;
+            font-size: 18px;
+          }
+          p {
+            font-size: 16px;
+            color: #fff !important;
+            padding: 0px 53px;
+            line-height: 20px;
+          }
+        }
+      }
+      .ourblogs {
+        display: block;
+        width: 100%;
+        .imagedata {
+          width: 100%;
+          height: 100%;
+          .textrel {
+            display: none;
+          }
+        }
+        .blogtext {
+          width: 100%;
+          margin-top: 25px;
+          .bolgview {
+            h2 {
+              font-size: 25px;
+            }
+            a {
+              padding: 8px 18px;
+              font-size: 16px;
+            }
+          }
+          .mainblog {
+            width: 100%;
+            .imagebar {
+              width: 100%;
+              img {
+                width: 100px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

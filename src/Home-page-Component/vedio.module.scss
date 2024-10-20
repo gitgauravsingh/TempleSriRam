@@ -1,0 +1,23 @@
+.vediodata {
+  width: 100%;
+  overflow-y: hidden;
+  position: relative;
+  video {
+    width: 100%;
+    position: relative;
+  }
+  .skipbutton {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    cursor: pointer;
+    h2 {
+      font-size: 22px;
+      font-style: italic;
+      color: #ffd08b;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

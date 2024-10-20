@@ -1,0 +1,127 @@
+.footerdata {
+  background: #000;
+  width: 100%;
+  padding: 15px 0px;
+  .wrapper {
+    width: 1050px;
+    margin: 0 auto;
+    .mainfoot {
+      display: flex;
+      justify-content: center;
+      .logodata {
+        width: 20%;
+        display: block;
+        text-align: center;
+        img {
+          width: 120px;
+          height: 120px;
+        }
+        h4 {
+          font-size: 15px;
+          color: #fff;
+          font-weight: 500;
+          padding: 0;
+          margin: 0;
+          line-height: 25px;
+          font-style: italic;
+        }
+      }
+      .ankerdata {
+        width: 60%;
+        ul {
+          display: flex;
+          list-style: none;
+          gap: 10px;
+          align-items: center;
+          li {
+            padding: 30px 0px;
+            a {
+              font-size: 15px;
+              color: #fff;
+              font-style: italic;
+              text-decoration: none;
+              font-weight: 500;
+              &:hover {
+                color: rgba(255, 255, 255, 0.6);
+                transition: 0.6s;
+              }
+            }
+          }
+        }
+      }
+      .icondata {
+        display: block;
+        width: 20%;
+        .dataicon {
+          display: flex;
+          gap: 15px;
+          padding: 30px 0px;
+          i {
+            background: #ffba55;
+            padding: 9px 11px;
+            border-radius: 50%;
+            color: #000;
+            font-size: 16px;
+          }
+        }
+        .maindata {
+          padding: 40px 0px;
+          select {
+            background: #ffba55;
+            padding: 5px 10px;
+            width: 150px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footerdata {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    .wrapper {
+      width: 100%;
+      .mainfoot {
+        display: block;
+        text-align: center;
+        padding: 20px 0px;
+        .logodata {
+          width: 100%;
+        }
+        .ankerdata {
+          width: 100%;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 10px;
+            li {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+        .icondata {
+          display: block;
+          text-align: center;
+          width: 100%;
+          .dataicon {
+            display: flex;
+            justify-content: center;
+          }
+          .maindata {
+            width: 100%;
+            select {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
