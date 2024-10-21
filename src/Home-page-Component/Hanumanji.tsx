@@ -87,9 +87,9 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                 <div className={Style.muteddata}>
                   <button onClick={toggleMute}>
                     {isMuted ? (
-                      <i className="fa-solid fa-volume-xmark"></i>
-                    ) : (
                       <i className="fa-solid fa-volume-high"></i>
+                    ) : (
+                      <i className="fa-solid fa-volume-xmark"></i>
                     )}
                   </button>
                 </div>
