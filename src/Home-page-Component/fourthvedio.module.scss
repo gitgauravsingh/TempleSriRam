@@ -1,6 +1,8 @@
 .vediodata {
   width: 100%;
   position: relative;
+  height: 100%;
+  overflow-y: hidden;
   .button {
     background: url(https://dvf7opio6knc7.cloudfront.net/satyugImages/btn-bg.png)
       no-repeat;
@@ -31,6 +33,7 @@
 @media only screen and (max-width: 768px) {
   .vediodata {
     width: 100%;
+    height: 100vh;
     .button {
       max-width: 150px;
       height: 40px;

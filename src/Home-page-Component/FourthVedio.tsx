@@ -28,7 +28,7 @@ const FourthVedio: React.FC<Ivediofourth> = ({
               <video
                 loop
                 autoPlay
-                style={{ width: "100%", objectFit: "cover", height: "100vh" }}
+                style={{ width: "100%", objectFit: "cover", height: "100%" }}
               >
                 <source
                   src="https://dvf7opio6knc7.cloudfront.net/video_v2/Mandir_Darshan.mp4"

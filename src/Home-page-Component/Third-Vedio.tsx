@@ -29,7 +29,7 @@ const ThirdVedio: React.FC<Ivedio> = ({
               <video
                 loop
                 autoPlay
-                style={{ width: "100%", objectFit: "cover", height: "100vh" }}
+                style={{ width: "100%", objectFit: "cover", height: "100%" }}
               >
                 <source
                   src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/Construction.mp4"
