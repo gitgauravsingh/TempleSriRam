@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./vedio.module.scss";
 import Second from "./Second";
 
@@ -10,6 +10,18 @@ interface Ivedio {
 const Vedio: React.FC<Ivedio> = ({ isVediodata, setIsVediodata }) => {
   const [issecond, setIssecond] = useState(false);
   const [isShow, setIsShow] = useState(true);
+  const [isVideoFirst, setIsVideoFirst] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const mobiledata = () => {
+      const videomobile = window.innerWidth <= 768;
+      setIsVideoFirst(videomobile);
+    };
+    window.addEventListener("resize", mobiledata);
+    return () => {
+      window.removeEventListener("resize", mobiledata);
+    };
+  }, []);
 
   const handleSkip = () => {
     setIssecond(true);
@@ -25,12 +37,20 @@ const Vedio: React.FC<Ivedio> = ({ isVediodata, setIsVediodata }) => {
               <video
                 autoPlay
                 loop
+                preload="auto"
+                crossOrigin="anonymous"
+                playsInline
                 style={{ width: "100%", objectFit: "cover", height: "100%" }}
               >
                 <source
-                  src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/before-game-720.mp4"
+                  src={
+                    isVideoFirst
+                      ? "https://dvf7opio6knc7.cloudfront.net/satyugvideos/before-game-720.mp4"
+                      : ""
+                  }
                   type="video/mp4"
                 />
+                Your browser does not support the video tag.
               </video>
               <div className={Style.skipbutton} onClick={handleSkip}>
                 <h2>Skip</h2>

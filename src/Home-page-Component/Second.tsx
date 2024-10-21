@@ -24,7 +24,7 @@ const Second: React.FC<ISecond> = ({ second, setSecond }) => {
             <div className={Style.seconddata}>
               <div className={Style.overlaydata}>
                 <div className={Style.wrapper}>
-                  <div className={Style.dotdatabar}></div>
+                  {/* <div className={Style.dotdatabar}></div> */}
                   <div className={Style.dotbar}>
                     <span>
                       <img
