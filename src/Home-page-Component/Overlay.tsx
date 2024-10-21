@@ -22,28 +22,27 @@ const Overlay: React.FC<IOver> = ({ data, setData }) => {
         <>
           {data && (
             <div className={Style.overlaydata}>
-              <div className={Style.overlaydatabar}>
-                <div className={Style.wrapper}>
-                  <div className={Style.arrowbar}>
-                    <div className={Style.imgbar}>
-                      <img src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png" />
-                    </div>
-                    <div className={Style.flagdata}>
-                      <img src="https://dvf7opio6knc7.cloudfront.net/satyugImages/welcome-flag.png" />
-                    </div>
-                    <div className={Style.textdata}>
-                      <img src="	https://dvf7opio6knc7.cloudfront.net/satyugImages/welcome-arrow-left.png" />
-                      <h2>
-                        One slogan, One name <br></br> Jai Shri Ram
-                      </h2>
-                      <img
-                        src="https://dvf7opio6knc7.cloudfront.net/satyugImages/welcome-flag-right.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className={Style.button} onClick={handleVedioClick}>
-                      <a href="#">Click to Enter</a>
-                    </div>
+              <div className={Style.wrapper}>
+                <div className={Style.arrowbar}>
+                  <img
+                    className={Style.imgbar}
+                    src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png"
+                  />
+                  <div className={Style.flagdata}>
+                    <img src="https://dvf7opio6knc7.cloudfront.net/satyugImages/welcome-flag.png" />
+                  </div>
+                  <div className={Style.textdata}>
+                    <img src="	https://dvf7opio6knc7.cloudfront.net/satyugImages/welcome-arrow-left.png" />
+                    <h2>
+                      One slogan, One name <br></br> Jai Shri Ram
+                    </h2>
+                    <img
+                      src="https://dvf7opio6knc7.cloudfront.net/satyugImages/welcome-flag-right.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className={Style.button} onClick={handleVedioClick}>
+                    <a href="#">Click to Enter</a>
                   </div>
                 </div>
               </div>
