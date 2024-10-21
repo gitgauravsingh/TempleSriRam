@@ -19,6 +19,10 @@
     max-width: 700px;
     min-height: 474px;
     padding-top: 39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .arrowbar {
       background: linear-gradient(180deg, #221509, #221509) padding-box,
         linear-gradient(180deg, #ffba55 1.32%, #ffba5530 48.44%, #ffba55 93.51%)
@@ -33,6 +37,7 @@
       height: 434px;
       z-index: 1;
       padding: 0px 0px 1.7rem;
+      border-radius: 5px;
       &:after {
         background-color: #221509;
         content: "";
@@ -117,25 +122,20 @@
       margin-left: auto;
       margin-right: auto;
       padding-top: 39px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
+
       .arrowbar {
         padding: 20px 10px;
         box-sizing: border-box;
         height: 100%;
         &::after {
-          max-width: 14rem;
+          max-width: 10rem;
         }
         .imgbar {
-          max-width: 14rem;
+          max-width: 10rem;
         }
 
         .flagdata {
-          display: flex;
-          justify-content: center;
+          max-width: 7rem;
           img {
             width: 100%;
             height: 100%;
@@ -147,7 +147,7 @@
             width: 50px;
           }
           h2 {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         .button {
