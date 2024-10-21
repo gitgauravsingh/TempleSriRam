@@ -25,9 +25,6 @@ const Vedio: React.FC<Ivedio> = ({ isVediodata, setIsVediodata }) => {
               <video
                 autoPlay
                 loop
-                preload="auto"
-                crossOrigin="anonymous"
-                playsInline
                 style={{ width: "100%", objectFit: "cover", height: "100%" }}
               >
                 <source
