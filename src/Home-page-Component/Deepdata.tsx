@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Style from "./second.module.scss";
 import ThirdVedio from "./Third-Vedio";
 import Hanumanji from "./Hanumanji";
+import DeepVideo from "./DeepVideo";
 
 interface ISecond {
   isDeepdata: any;
@@ -10,7 +11,7 @@ interface ISecond {
 
 const Deepdata: React.FC<ISecond> = ({ isDeepdata, setIsDeepdata }) => {
   const [showbar, setShowbar] = useState(true);
-  const [ishanumanjidata, setIshanumanjidata] = useState(false);
+  const [isdeepVedio, setIsdeepVedio] = useState(false);
 
   useEffect(() => {
     const setheightdata = () => {
@@ -23,7 +24,7 @@ const Deepdata: React.FC<ISecond> = ({ isDeepdata, setIsDeepdata }) => {
   }, []);
 
   const handleVedioClick = () => {
-    setIshanumanjidata(true);
+    setIsdeepVedio(true);
     setShowbar(false);
   };
 
@@ -61,9 +62,9 @@ const Deepdata: React.FC<ISecond> = ({ isDeepdata, setIsDeepdata }) => {
           )}
         </>
       )}
-      <Hanumanji
-        ishanumanji={ishanumanjidata}
-        setIshanumanji={setIshanumanjidata}
+      <DeepVideo
+        isdeepVediodata={isdeepVedio}
+        setIsdeepVediodata={setIsdeepVedio}
       />
     </>
   );
