@@ -11,6 +11,16 @@ const Vedio: React.FC<Ivedio> = ({ isVediodata, setIsVediodata }) => {
   const [issecond, setIssecond] = useState(false);
   const [isShow, setIsShow] = useState(true);
 
+  useEffect(() => {
+    const setheightdata = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setheightdata();
+    window.addEventListener("resize", setheightdata);
+    return () => window.removeEventListener("resize", setheightdata);
+  }, []);
+
   const handleSkip = () => {
     setIssecond(true);
     setIsShow(false);

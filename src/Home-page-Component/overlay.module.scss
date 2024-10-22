@@ -7,7 +7,7 @@
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(var(--vh, 1vh)* 100);
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@
       position: relative;
       width: 100%;
       padding: 0 0 1.7rem;
-      border-radius: 5px;
+      border-radius: 10px;
       z-index: 1;
 
       &::after {
