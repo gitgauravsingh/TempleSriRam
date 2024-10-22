@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./overlay.module.scss";
 import Vedio from "./Vedio";
 
@@ -10,6 +10,16 @@ interface IOver {
 const Overlay: React.FC<IOver> = ({ data, setData }) => {
   const [showbar, setShowbar] = useState(true);
   const [isVedioVisible, setIsVedioVisible] = useState(false);
+
+  useEffect(() => {
+    const setheightdata = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setheightdata();
+    window.addEventListener("resize", setheightdata);
+    return () => window.removeEventListener("resize", setheightdata);
+  }, []);
 
   const handleVedioClick = () => {
     setIsVedioVisible(true);

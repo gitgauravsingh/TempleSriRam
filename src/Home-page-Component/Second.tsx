@@ -26,11 +26,14 @@ const Second: React.FC<ISecond> = ({ second, setSecond }) => {
                 <div className={Style.wrapper}>
                   <div className={Style.arrowbar}>
                     <img
-                      src="https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png"
-                      alt=""
+                      className={Style.imgbar}
+                      src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png"
                     />
-                    <div className={Style.imgbar}>
-                      <img src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png" />
+                    <div className={Style.mainimg}>
+                      <img
+                        src="https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png"
+                        alt=""
+                      />
                     </div>
                     <div className={Style.button} onClick={handleVedioClick}>
                       <a href="#">Enter</a>
