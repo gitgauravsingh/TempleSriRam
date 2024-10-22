@@ -41,35 +41,29 @@
           }
         }
         .animation {
+          display: block;
           width: 250px;
           margin: 0 auto;
           position: relative;
           overflow: hidden;
           height: 150px;
-          img {
-            width: 100%;
+          .dropdata {
+            width: 10px;
+            height: 10px;
             position: absolute;
-            height: 100%;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: fall 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+            top: -10px;
+            animation: fall 3s linear infinite;
+            opacity: 1;
           }
           @keyframes fall {
             0% {
-              top: -100px;
-              transform: translateX(-50%) scale(1);
-            }
-            70% {
-              top: 100%;
-              transform: translateX(-50%) scale(1);
-            }
-            80% {
-              transform: translateX(-50%) scale(1.1);
+              opacity: 1;
+              transform: translateY(0);
             }
             100% {
-              top: -100px;
-              transform: translateX(-50%) scale(1);
+              opacity: 1;
+              transform: translateY(200px);
             }
           }
         }

@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
 import Style from "./hanumanji.module.scss";
-import Image from "../img/download.png";
-import Vedio from "./Vedio";
 
 interface IHanumanji {
   ishanumanji: any;
@@ -20,6 +18,29 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
     }
   };
 
+  const NUM_DROPS = 60;
+
+  const RainDrops = () => {
+    return (
+      <>
+        {Array.from({ length: NUM_DROPS }).map((_, index) => (
+          <img
+            key={index}
+            src={
+              "http://www.clker.com/cliparts/n/F/Z/O/p/7/red-rain-drop-hi.png"
+            }
+            alt="Rain Drop"
+            className={Style.dropdata}
+            style={{
+              animationDelay: `${Math.random() * 3}s`,
+              left: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </>
+    );
+  };
+
   return (
     <>
       {ishanumanji && (
@@ -34,7 +55,7 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                   />
                 </div>
                 <div className={Style.animation}>
-                  <img src={Image} alt="" />
+                  <RainDrops />
                 </div>
                 <div className={Style.formbar}>
                   <form>
