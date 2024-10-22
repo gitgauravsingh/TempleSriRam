@@ -93,13 +93,14 @@
         .formbar {
           display: block;
           width: 100%;
+          margin-top: 20px;
           form {
             display: block;
             width: 100%;
             .Namedata {
               width: 100%;
-              margin-top: 25px;
               position: relative;
+              margin-top: 5px;
               label {
                 color: #ffd08b;
                 font-size: 14px;
@@ -132,6 +133,19 @@
               }
               &:nth-child(3) {
                 margin-left: 34px;
+              }
+              .error {
+                color: #ff0000;
+                font-size: 14px;
+                font-weight: 600;
+                font-style: italic;
+                padding-left: 50px;
+              }
+              &:nth-child(2) .error {
+                padding-left: 75px;
+              }
+              &:nth-child(3) .error {
+                padding-left: 65px;
               }
               .flagdata {
                 position: absolute;

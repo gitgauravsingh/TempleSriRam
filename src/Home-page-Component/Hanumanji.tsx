@@ -9,16 +9,49 @@ interface IHanumanji {
 const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(false);
-  const [formData, setFormData] = useState({
+  const [data, setData] = useState({
     name: "",
-    whatsapp: "",
+    number: "",
     email: "",
   });
-  const [errors, setErrors] = useState<{
-    name?: string;
-    whatsapp?: string;
-    email?: string;
-  }>({});
+  const [errors, setErrors] = useState({
+    error: "",
+    error1: "",
+    error2: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newData = { ...data, [e.target.id.toLowerCase()]: e.target.value };
+    setData(newData);
+
+    if (e.target.id === "Name") setErrors({ ...errors, error: "" });
+    if (e.target.id === "Number") setErrors({ ...errors, error1: "" });
+    if (e.target.id === "Email") setErrors({ ...errors, error2: "" });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    let valid = true;
+    const newErrors = { error: "", error1: "", error2: "" };
+
+    if (data.name === "") {
+      newErrors.error = "Name is required";
+      valid = false;
+    }
+    if (data.number === "") {
+      newErrors.error1 = "Whatsapp number is required";
+      valid = false;
+    }
+    if (data.email === "") {
+      newErrors.error2 = "Email is required";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    if (valid) {
+      console.log("Form Submitted", data);
+    }
+  };
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -47,36 +80,6 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
         ))}
       </>
     );
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const newErrors: { [key: string]: string } = {};
-
-    if (!formData.name) {
-      newErrors.name = "Name is required";
-    }
-    if (!formData.whatsapp) {
-      newErrors.whatsapp = "Whatsapp number is required";
-    }
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-    } else {
-      setErrors({});
-      console.log("Form submitted successfully", formData);
-    }
   };
 
   return (
@@ -108,44 +111,37 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                       <label>Name :</label>
                       <input
                         type="text"
-                        name="name"
+                        placeholder="Name"
                         onChange={handleChange}
-                        required
-                        style={{ borderColor: errors.name ? "red" : "initial" }}
+                        id="Name"
+                        value={data.name}
                       />
-                      {errors.name && (
-                        <span style={{ color: "red" }}>{errors.name}</span>
-                      )}
+                      <br></br>
+                      <span className={Style.error}>{errors.error}</span>
                     </div>
                     <div className={Style.Namedata}>
                       <label>Whatsapp :</label>
                       <input
-                        type="text"
-                        name="whatsapp"
+                        type="number"
+                        placeholder="+91"
+                        id="Number"
                         onChange={handleChange}
-                        required
-                        style={{
-                          borderColor: errors.whatsapp ? "red" : "initial",
-                        }}
+                        value={data.number}
                       />
-                      {errors.whatsapp && (
-                        <span style={{ color: "red" }}>{errors.whatsapp}</span>
-                      )}
+                      <br></br>
+                      <span className={Style.error}>{errors.error1}</span>
                     </div>
                     <div className={Style.Namedata}>
                       <label>Email Id :</label>
                       <input
                         type="email"
-                        name="email"
+                        id="Email"
+                        placeholder="Example@gmail.com"
                         onChange={handleChange}
-                        required
-                        style={{
-                          borderColor: errors.email ? "red" : "initial",
-                        }}
+                        value={data.email}
                       />
-                      {errors.email && (
-                        <span style={{ color: "red" }}>{errors.email}</span>
-                      )}
+                      <br></br>
+                      <span className={Style.error}>{errors.error2}</span>
                     </div>
                     <div className={Style.buttondata}>
                       <button type="submit">
