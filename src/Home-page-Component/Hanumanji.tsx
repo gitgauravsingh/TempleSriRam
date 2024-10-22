@@ -9,6 +9,16 @@ interface IHanumanji {
 const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isMuted, setIsMuted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    whatsapp: "",
+    email: "",
+  });
+  const [errors, setErrors] = useState<{
+    name?: string;
+    whatsapp?: string;
+    email?: string;
+  }>({});
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -26,9 +36,7 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
         {Array.from({ length: NUM_DROPS }).map((_, index) => (
           <img
             key={index}
-            src={
-              "http://www.clker.com/cliparts/n/F/Z/O/p/7/red-rain-drop-hi.png"
-            }
+            src="http://www.clker.com/cliparts/n/F/Z/O/p/7/red-rain-drop-hi.png"
             alt="Rain Drop"
             className={Style.dropdata}
             style={{
@@ -39,6 +47,36 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
         ))}
       </>
     );
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const newErrors: { [key: string]: string } = {};
+
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+    }
+    if (!formData.whatsapp) {
+      newErrors.whatsapp = "Whatsapp number is required";
+    }
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      setErrors({});
+      console.log("Form submitted successfully", formData);
+    }
   };
 
   return (
@@ -65,21 +103,52 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                   <RainDrops />
                 </div>
                 <div className={Style.formbar}>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className={Style.Namedata}>
                       <label>Name :</label>
-                      <input type="text" name="Enter Your Name" />
+                      <input
+                        type="text"
+                        name="name"
+                        onChange={handleChange}
+                        required
+                        style={{ borderColor: errors.name ? "red" : "initial" }}
+                      />
+                      {errors.name && (
+                        <span style={{ color: "red" }}>{errors.name}</span>
+                      )}
                     </div>
                     <div className={Style.Namedata}>
                       <label>Whatsapp :</label>
-                      <input type="text" name="+91" />
+                      <input
+                        type="text"
+                        name="whatsapp"
+                        onChange={handleChange}
+                        required
+                        style={{
+                          borderColor: errors.whatsapp ? "red" : "initial",
+                        }}
+                      />
+                      {errors.whatsapp && (
+                        <span style={{ color: "red" }}>{errors.whatsapp}</span>
+                      )}
                     </div>
                     <div className={Style.Namedata}>
                       <label>Email Id :</label>
-                      <input type="text" name="Enter Your Email" />
+                      <input
+                        type="email"
+                        name="email"
+                        onChange={handleChange}
+                        required
+                        style={{
+                          borderColor: errors.email ? "red" : "initial",
+                        }}
+                      />
+                      {errors.email && (
+                        <span style={{ color: "red" }}>{errors.email}</span>
+                      )}
                     </div>
                     <div className={Style.buttondata}>
-                      <button>
+                      <button type="submit">
                         <img
                           src="https://dvf7opio6knc7.cloudfront.net/satyugImages/left-arrow.png"
                           alt="left-arrow"
@@ -104,7 +173,10 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                   loop
                   style={{ width: "100%", objectFit: "cover", height: "100%" }}
                 >
-                  <source src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/BahumulyaWEBM.webm" />
+                  <source
+                    src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/BahumulyaWEBM.webm"
+                    type="video/webm"
+                  />
                 </video>
               </div>
               <div className={Style.muteddata}>
