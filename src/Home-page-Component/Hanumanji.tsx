@@ -51,7 +51,7 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                 src="https://dvf7opio6knc7.cloudfront.net/satyugImages/back-icon.png"
                 alt=""
               />
-              <a href="/">Back</a>
+              <a href="">Back</a>
             </div>
             <div className={Style.formdata}>
               <div className={Style.formsec}>

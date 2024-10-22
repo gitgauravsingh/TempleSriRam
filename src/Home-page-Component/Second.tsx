@@ -38,7 +38,7 @@ const Second: React.FC<ISecond> = ({ second, setSecond }) => {
                     src="https://dvf7opio6knc7.cloudfront.net/satyugImages/back-icon.png"
                     alt=""
                   />
-                  <a href="/">Back</a>
+                  <a href="">Back</a>
                 </div>
                 <div className={Style.arrowbar}>
                   <img
