@@ -38,10 +38,9 @@ const DeepVideo: React.FC<Ivedio> = ({
             <div className={Style.vediodata}>
               <video autoPlay loop style={{ objectFit: "cover" }}>
                 <source
-                  src="c:\Users\ms\Downloads\ayodhyawale ayodhya explore rammandir ayodhyadeepotsav  Ayodhya Deepotsav Ayodhya Deepotsav Ram Mandir Diwali .mp4"
+                  src={`${process.env.PUBLIC_URL}/ayodhyawale ayodhya explore rammandir ayodhyadeepotsav  Ayodhya Deepotsav Ayodhya Deepotsav Ram Mandir Diwali .mp4`}
                   type="video/mp4"
                 />
-                Your browser does not support the video tag.
               </video>
               <div className={Style.skipbutton} onClick={handleSkip}>
                 <h2>Skip</h2>
