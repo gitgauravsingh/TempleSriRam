@@ -11,6 +11,7 @@ interface ISriRam {
 const SriRamPage: React.FC<ISriRam> = ({ isSriRamPage, setIsSriRamPage }) => {
   const [showbar, setShowbar] = useState(true);
   const [isVedioVisible, setIsVedioVisible] = useState(false);
+  const [vedioFirst, setVideoFirst] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const setheightdata = () => {
@@ -20,6 +21,17 @@ const SriRamPage: React.FC<ISriRam> = ({ isSriRamPage, setIsSriRamPage }) => {
     setheightdata();
     window.addEventListener("resize", setheightdata);
     return () => window.removeEventListener("resize", setheightdata);
+  }, []);
+
+  useEffect(() => {
+    const mobiledata = () => {
+      const videomobile = window.innerWidth <= 768;
+      setVideoFirst(videomobile);
+    };
+    window.addEventListener("resize", mobiledata);
+    return () => {
+      window.removeEventListener("resize", mobiledata);
+    };
   }, []);
 
   const handleVedioClick = () => {
@@ -48,7 +60,11 @@ const SriRamPage: React.FC<ISriRam> = ({ isSriRamPage, setIsSriRamPage }) => {
                   />
                   <div className={Style.mainimg}>
                     <img
-                      src="https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png"
+                      src={
+                        !vedioFirst
+                          ? "https://images.bhaskarassets.com/thumb/2048x0/web2images/web-frontend/3D-Ram-Mandir/new-main-bg-v1-desktop-hi.jpg"
+                          : "https://images.bhaskarassets.com/thumb/2048x0/web2images/web-frontend/3D-Ram-Mandir/new-main-bg-v1-mobile-hi.jpg"
+                      }
                       alt=""
                     />
                   </div>
