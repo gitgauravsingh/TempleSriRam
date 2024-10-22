@@ -220,20 +220,20 @@
       .vediodata {
         width: 53%;
         position: relative;
-        .muteddata {
-          position: absolute;
-          top: 0px;
-          right: 0px;
-          button {
-            background: none;
-            border: solid 2px #ffd08b;
-            padding: 12px 11px;
-            border-radius: 50%;
-            outline: none;
-            i {
-              color: #ddd;
-              font-size: 25px;
-            }
+      }
+      .muteddata {
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        button {
+          background: none;
+          border: solid 2px #ffd08b;
+          padding: 12px 11px;
+          border-radius: 50%;
+          outline: none;
+          i {
+            color: #ddd;
+            font-size: 25px;
           }
         }
       }

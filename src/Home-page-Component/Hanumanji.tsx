@@ -10,7 +10,7 @@ interface IHanumanji {
 
 const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -84,15 +84,15 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                 >
                   <source src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/BahumulyaWEBM.webm" />
                 </video>
-                <div className={Style.muteddata}>
-                  <button onClick={toggleMute}>
-                    {isMuted ? (
-                      <i className="fa-solid fa-volume-xmark"></i>
-                    ) : (
-                      <i className="fa-solid fa-volume-high"></i>
-                    )}
-                  </button>
-                </div>
+              </div>
+              <div className={Style.muteddata}>
+                <button onClick={toggleMute}>
+                  {isMuted ? (
+                    <i className="fa-solid fa-volume-xmark"></i>
+                  ) : (
+                    <i className="fa-solid fa-volume-high"></i>
+                  )}
+                </button>
               </div>
             </div>
           </div>
