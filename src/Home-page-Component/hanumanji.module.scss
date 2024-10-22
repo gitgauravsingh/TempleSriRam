@@ -240,7 +240,7 @@
       }
       .muteddata {
         position: absolute;
-        top: 40px;
+        top: 14px;
         right: 0px;
         button {
           background: none;
@@ -267,6 +267,7 @@
       width: 100%;
       .backbutton {
         left: 10px;
+        top: 22px;
         a {
           font-size: 18px;
         }
@@ -295,7 +296,7 @@
           width: 100%;
           padding-top: 40px;
           .muteddata {
-            top: 30px;
+            top: 15px;
           }
         }
       }
