@@ -46,6 +46,13 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
       {ishanumanji && (
         <div className={Style.hanumanjidata}>
           <div className={Style.wrapper}>
+            <div className={Style.backbutton}>
+              <img
+                src="https://dvf7opio6knc7.cloudfront.net/satyugImages/back-icon.png"
+                alt=""
+              />
+              <a href="/">Back</a>
+            </div>
             <div className={Style.formdata}>
               <div className={Style.formsec}>
                 <div className={Style.imagedata}>

@@ -33,6 +33,13 @@ const Second: React.FC<ISecond> = ({ second, setSecond }) => {
           {second && (
             <div className={Style.overlaydata}>
               <div className={Style.wrapper}>
+                <div className={Style.backbutton}>
+                  <img
+                    src="https://dvf7opio6knc7.cloudfront.net/satyugImages/back-icon.png"
+                    alt=""
+                  />
+                  <a href="/">Back</a>
+                </div>
                 <div className={Style.arrowbar}>
                   <img
                     className={Style.imgbar}

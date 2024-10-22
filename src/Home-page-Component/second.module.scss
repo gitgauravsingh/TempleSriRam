@@ -13,13 +13,16 @@
   justify-content: center;
   align-items: center;
   &::after {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
+    background-image: url("https://dvf7opio6knc7.cloudfront.net/satyugImages/login-bg-overlay.webp");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
     content: "";
-    top: 0;
+    height: 100%;
     left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
   .wrapper {
     margin: 0 auto;
@@ -29,18 +32,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    .backbutton {
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      z-index: 11;
+      cursor: pointer;
+      img {
+        transition: 0.6s;
+      }
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffd08b;
+        font-weight: 700;
+        font-style: italic;
+      }
+      &:hover img:first-of-type {
+        transform: translateX(-10px);
+      }
+    }
     .arrowbar {
       background: linear-gradient(180deg, #221509, #221509) padding-box,
         linear-gradient(180deg, #ffba55 1.32%, #ffba5530 48.44%, #ffba55 93.51%)
           border-box;
       border: 3px solid #0000;
+      border-radius: 10px;
       display: flex;
       flex-direction: column;
       position: relative;
       width: 100%;
-      padding: 0 0 1.7rem;
-      border-radius: 10px;
       z-index: 1;
       &::after {
         background-color: #221509;
@@ -60,15 +84,42 @@
         position: absolute;
         top: -4px;
         transform: translate(-50%, -50%);
+        z-index: 1;
       }
 
       .mainimg {
         width: 100%;
-        height: 352px;
+        height: 100%;
         img {
           width: 100%;
           object-fit: cover;
           border-radius: 10px;
+          height: 100%;
+        }
+        &::after {
+          background: linear-gradient(180deg, #000, #0000 86.41%),
+            linear-gradient(0deg, #110a0a00, #110a0a00),
+            linear-gradient(
+              180deg,
+              #6f6f6f00 18.46%,
+              #fff0 77.53%,
+              #3f3f3f6b 134.04%
+            ),
+            linear-gradient(
+              180deg,
+              #ffba5500 33.25%,
+              #ffba5500 67.37%,
+              #ffba5500
+            );
+          content: "";
+          height: 100%;
+          border-radius: 10px;
+          left: 0;
+          opacity: 0.8;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
         }
       }
 
@@ -112,10 +163,13 @@
       width: 100%;
       margin: 0 auto;
       padding-top: 20px;
-
+      .backbutton {
+        left: 10px;
+        a {
+          font-size: 18px;
+        }
+      }
       .arrowbar {
-        height: auto;
-        padding: 0 0 2.7rem;
         &::after {
           max-width: 10rem;
         }
@@ -126,7 +180,7 @@
 
         .mainimg {
           width: 100%;
-          height: 128px;
+          height: 100%;
           img {
             width: 100%;
           }
