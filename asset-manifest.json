@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/TempleSriRam/static/css/main.3df6fa27.css",
-    "main.js": "/TempleSriRam/static/js/main.03df86ce.js",
+    "main.css": "/TempleSriRam/static/css/main.2ecdf155.css",
+    "main.js": "/TempleSriRam/static/js/main.c967b38a.js",
     "index.html": "/TempleSriRam/index.html",
-    "main.3df6fa27.css.map": "/TempleSriRam/static/css/main.3df6fa27.css.map",
-    "main.03df86ce.js.map": "/TempleSriRam/static/js/main.03df86ce.js.map"
+    "main.2ecdf155.css.map": "/TempleSriRam/static/css/main.2ecdf155.css.map",
+    "main.c967b38a.js.map": "/TempleSriRam/static/js/main.c967b38a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3df6fa27.css",
-    "static/js/main.03df86ce.js"
+    "static/css/main.2ecdf155.css",
+    "static/js/main.c967b38a.js"
   ]
 }
