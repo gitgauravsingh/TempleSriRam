@@ -32,22 +32,20 @@ const Second: React.FC<ISecond> = ({ second, setSecond }) => {
         <>
           {second && (
             <div className={Style.overlaydata}>
-              <div className={Style.overlaydatabar}>
-                <div className={Style.wrapper}>
-                  <div className={Style.arrowbar}>
+              <div className={Style.wrapper}>
+                <div className={Style.arrowbar}>
+                  <img
+                    className={Style.imgbar}
+                    src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png"
+                  />
+                  <div className={Style.mainimg}>
                     <img
-                      className={Style.imgbar}
-                      src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png"
+                      src="https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png"
+                      alt=""
                     />
-                    <div className={Style.mainimg}>
-                      <img
-                        src="https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className={Style.button} onClick={handleVedioClick}>
-                      <a href="#">Enter</a>
-                    </div>
+                  </div>
+                  <div className={Style.button} onClick={handleVedioClick}>
+                    <a href="#">Enter</a>
                   </div>
                 </div>
               </div>
