@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Style from "./fourthvedio.module.scss";
 import Hanumanji from "./Hanumanji";
 import SriRam from "./SriRam";
+import SriRamPage from "./SriRampage";
 
 interface Ivediofourth {
   isVediodatafourth: any;
@@ -12,7 +13,7 @@ const FourthVedio: React.FC<Ivediofourth> = ({
   isVediodatafourth,
   setIsVediodatafourth,
 }) => {
-  const [isSriRamdata, setIsSriRamdata] = useState(false);
+  const [isSriRamPagedata, setIsSriRamPagedata] = useState(false);
   const [isShowdata, setIsShowdata] = useState(true);
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const FourthVedio: React.FC<Ivediofourth> = ({
 
   const handleClick = () => {
     setIsShowdata(false);
-    setIsSriRamdata(true);
+    setIsSriRamPagedata(true);
   };
 
   return (
@@ -49,7 +50,10 @@ const FourthVedio: React.FC<Ivediofourth> = ({
           )}
         </>
       )}
-      <SriRam isSriRam={isSriRamdata} setIsSriRam={setIsSriRamdata} />
+      <SriRamPage
+        isSriRamPage={isSriRamPagedata}
+        setIsSriRamPage={setIsSriRamPagedata}
+      />
     </>
   );
 };
