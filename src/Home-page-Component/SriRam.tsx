@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Style from "./sriram.module.scss";
 import Hanumanji from "./Hanumanji";
+import Deepdata from "./Deepdata";
 
 export interface ISriRam {
   isSriRam: any;
@@ -16,7 +17,7 @@ const SriRam: React.FC<ISriRam> = ({ isSriRam, setIsSriRam }) => {
   const [videoEnded, setVideoEnded] = useState(false);
   const [vedioEndedFirst, setVideoEndedFirst] = useState(false);
   const [rotateImg1, setRotateImg1] = useState(true);
-  const [isHanumanjidata, setIsHanumanjidata] = useState(false);
+  const [isDeep, setIsDeep] = useState(false);
   const [isShowdata, setIsShowdata] = useState(true);
   const [vedioFirst, setVideoFirst] = useState(window.innerWidth <= 768);
   const fifthvedioref: any = useRef(null);
@@ -129,7 +130,7 @@ const SriRam: React.FC<ISriRam> = ({ isSriRam, setIsSriRam }) => {
   };
 
   const handleClick = () => {
-    setIsHanumanjidata(true);
+    setIsDeep(true);
     setIsShowdata(false);
   };
 
@@ -381,10 +382,7 @@ const SriRam: React.FC<ISriRam> = ({ isSriRam, setIsSriRam }) => {
           )}
         </div>
       )}
-      <Hanumanji
-        ishanumanji={isHanumanjidata}
-        setIshanumanji={setIsHanumanjidata}
-      />
+      <Deepdata isDeepdata={isDeep} setIsDeepdata={setIsDeep} />
     </>
   );
 };
