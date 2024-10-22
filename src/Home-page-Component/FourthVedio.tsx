@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./fourthvedio.module.scss";
 import Hanumanji from "./Hanumanji";
 
@@ -14,6 +14,16 @@ const FourthVedio: React.FC<Ivediofourth> = ({
   const [ishanumanjidata, setIshanumanjidata] = useState(false);
   const [isShowdata, setIsShowdata] = useState(true);
 
+  useEffect(() => {
+    const setheightdata = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setheightdata();
+    window.addEventListener("resize", setheightdata);
+    return () => window.removeEventListener("resize", setheightdata);
+  }, []);
+
   const handleClick = () => {
     setIsShowdata(false);
     setIshanumanjidata(true);
@@ -25,11 +35,7 @@ const FourthVedio: React.FC<Ivediofourth> = ({
         <>
           {isVediodatafourth && (
             <div className={Style.vediodata}>
-              <video
-                loop
-                autoPlay
-                style={{ width: "100%", objectFit: "cover", height: "100%" }}
-              >
+              <video loop autoPlay style={{ objectFit: "cover" }}>
                 <source
                   src="https://dvf7opio6knc7.cloudfront.net/video_v2/Mandir_Darshan.mp4"
                   type="video/mp4"

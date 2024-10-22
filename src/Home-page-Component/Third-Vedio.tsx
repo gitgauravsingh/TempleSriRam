@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./thirdvideo.module.scss";
 import FourthVedio from "./FourthVedio";
 
@@ -15,6 +15,16 @@ const ThirdVedio: React.FC<Ivedio> = ({
   const [isfourth, setIsfourt] = useState(false);
   const [isShowdata, setIsShowdata] = useState(true);
 
+  useEffect(() => {
+    const setheightdata = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setheightdata();
+    window.addEventListener("resize", setheightdata);
+    return () => window.removeEventListener("resize", setheightdata);
+  }, []);
+
   const handleClick = () => {
     setIsfourt(true);
     setIsShowdata(false);
@@ -26,11 +36,7 @@ const ThirdVedio: React.FC<Ivedio> = ({
         <>
           {isVediodataThird && (
             <div className={Style.vediodata}>
-              <video
-                loop
-                autoPlay
-                style={{ width: "100%", objectFit: "cover", height: "100%" }}
-              >
+              <video loop autoPlay style={{ objectFit: "cover" }}>
                 <source
                   src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/Construction.mp4"
                   type="video/mp4"
