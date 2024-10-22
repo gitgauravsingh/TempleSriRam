@@ -48,10 +48,20 @@ const Deepdata: React.FC<ISecond> = ({ isDeepdata, setIsDeepdata }) => {
                     src="https://dvf7opio6knc7.cloudfront.net/satyugImages/up-bow.png"
                   />
                   <div className={Style.mainimg}>
-                    <img
-                      src="https://dvf7opio6knc7.cloudfront.net/collective_p2/Ram%20Mandir%20ka%20Nirmaan.png"
-                      alt=""
-                    />
+                    <video
+                      autoPlay
+                      loop
+                      style={{
+                        objectFit: "cover",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    >
+                      <source
+                        src={`${process.env.PUBLIC_URL}/ShriRam-dewwali-vedio.webm`}
+                        type="video/mp4"
+                      />
+                    </video>
                   </div>
                   <div className={Style.button} onClick={handleVedioClick}>
                     <a href="#">Enter</a>

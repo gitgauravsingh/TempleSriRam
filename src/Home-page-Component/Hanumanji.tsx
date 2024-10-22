@@ -73,12 +73,6 @@ const Hanumanji: React.FC<IHanumanji> = ({ ishanumanji, setIshanumanji }) => {
                     <div className={Style.Namedata}>
                       <label>Whatsapp :</label>
                       <input type="text" name="+91" />
-                      <div className={Style.flagdata}>
-                        <img
-                          src="https://tse1.mm.bing.net/th?id=OIP.YHufaYYtdq8EtHQRPAx_9QHaE8&pid=Api&P=0&h=180"
-                          alt=""
-                        />
-                      </div>
                     </div>
                     <div className={Style.Namedata}>
                       <label>Email Id :</label>
