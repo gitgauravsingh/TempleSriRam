@@ -32,11 +32,7 @@ const Vedio: React.FC<Ivedio> = ({ isVediodata, setIsVediodata }) => {
         <>
           {isVediodata && (
             <div className={Style.vediodata}>
-              <video
-                autoPlay
-                loop
-                style={{ width: "100%", objectFit: "cover", height: "100%" }}
-              >
+              <video autoPlay loop style={{ objectFit: "cover" }}>
                 <source
                   src="https://dvf7opio6knc7.cloudfront.net/satyugvideos/before-game-720.mp4"
                   type="video/mp4"
